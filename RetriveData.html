@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="assets/css/style1.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <ul class="actions stacked">
+        <li><a href="generic.html" class="button primary">Services</a></li>
+    </ul>
+
+<center>
+   
+    <h2>Enter name of user to get information</h2>
+    <br>
+    <input type="text"  id="user"><br>
+    <br>
+    <button type="button" onclick="getdata()" >Get</button><br>
+    <br>
+    <input type="text" id="user2"><br>
+    <br>
+    <button type="button" onclick="deletedata()">Delete</button><br>
+
+</center>
+<br>
+<center>
+    <p>First Name: <strong id="name"></strong></p><br>
+    <p>Last Name: <strong id="lastname"></strong></p><br>
+    <p>Email: <strong id="email"></strong></p><br>
+    <p>Phoneno: <strong id="phoneno"></strong></p><br>
+    <p>appointmentID: <strong id="appointmentid"></strong></p>
+
+</center>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+
+
+
+<script>
+ 
+    var firebaseConfig = {
+       apiKey: "AIzaSyAApf81Sf1Oa1BCxszXYeOz4QLir91M3Vo",
+       authDomain: "salon-management-system-da0af.firebaseapp.com",
+       databaseURL: "https://salon-management-system-da0af-default-rtdb.firebaseio.com/",
+       projectId: "salon-management-system-da0af",
+       storageBucket: "salon-management-system-da0af.appspot.com",
+       messagingSenderId: "234328146997",
+      appId: "1:234328146997:web:b3313750bed1a336eb9d7c",
+      measurementId: "G-XQJ6L1R78N"
+    };
+   
+    firebase.initializeApp(firebaseConfig);
+    
+</script>
+<script src="assets/js/Read.js"></script>
+</body>
+</html>

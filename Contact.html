@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Elements - Spectral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="Contact us/formstyle.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">	
+							<div class="inner">
+							<h1><a href="index.html">SR Salon</a></h1>
+							</div>
+							<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="generic.html">Services</a></li>
+											<li><a href="elements.html">Gallery</a></li>
+											<li><a href="Contact.html">Contact Us</a></li>
+											<li><a href="login.html">Admin-Login</a></li>
+											
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+
+							</div>
+				<!-- Main -->
+<!-- contact section -->
+<section id="contact-section">
+	<div class="container">
+		 <h2>Contact Us</h2>
+	   <p>Email us and keep upto date with our latest news</p>
+	  <div class="contact-form">
+
+		   <!-- First grid -->
+		<div>
+		  <i class="fa fa-map-marker"></i><span class="form-info">  Bhagyanagar Belgavi-590008 </span><br>
+		  <i class="fa fa-phone" > </i><span class="form-info">  +91 7513200000  </span><br>
+		  <i class="fa fa-envelope"></i><span class="form-info">  SRSALON@gmail.com </span>
+		</div>
+		
+			<!-- second grid -->
+			<div>        
+				<form>
+				  <input type="text" id="fname" placeholder="Your Name" required><br>
+				  <input type="text" id="lname"placeholder="Last Name" required><br>
+				  <input type="Email" id="email" placeholder="Email" required><br>
+				  <input type="text" id="feedback" placeholder="Enter Your Feedback" required><br>
+	
+				  <button type="submit" id="contact" class="submit">Send Message</button> 
+				  </form>   
+		  
+		</div>
+	  </div>
+	</div>
+  </section>
+  <div class="contact_container">
+	<div class="g_map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.8018455767387!2d74.48645171480452!3d15.814399089038814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65da8b3c382b%3A0x2f2a48d70ea7a71e!2sGogte%20Institute%20Of%20Technology%20Rd%2C%20Udyambag%20Industrial%20Area%2C%20Udyambag%2C%20Belagavi%2C%20Karnataka%20590008!5e0!3m2!1sen!2sin!4v1640676249892!5m2!1sen!2sin" width="2000" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+	
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/firebase/firebase-analytics.js"></script>
+
+			
+	<!-- FIREBASE -->
+	<script type="module">
+
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+		import { getDatabase,set,ref,push } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+
+	 const firebaseConfig = {
+           apiKey: "AIzaSyAApf81Sf1Oa1BCxszXYeOz4QLir91M3Vo",
+           authDomain: "salon-management-system-da0af.firebaseapp.com",
+           databaseURL: "https://salon-management-system-da0af-default-rtdb.firebaseio.com/",
+           projectId: "salon-management-system-da0af",
+           storageBucket: "salon-management-system-da0af.appspot.com",
+           messagingSenderId: "234328146997",
+          appId: "1:234328146997:web:b3313750bed1a336eb9d7c",
+          measurementId: "G-XQJ6L1R78N"
+        };
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const database = getDatabase(app);
+
+
+	contact.addEventListener('click',(e) => {
+			e.preventDefault()
+		var firstname=document.getElementById('fname').value
+  		var lastname=document.getElementById('lname').value
+  		var email=document.getElementById('email').value
+  		var feedback=document.getElementById('feedback').value
+
+
+ 	set(ref(database , 'Contact/' + firstname), {
+      firstname: firstname,
+	  lastname: lastname,
+	  email: email,
+	  feedback: feedback,
+
+  });
+  alert('Sent');
+  });
+</script>
+
+	</body>
+</html>

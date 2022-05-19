@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+
+<head>
+
+	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+      
+</head>
+
+<body class="is-preload">
+    <!-- <div style="margin:10px">
+        <span id="user" class="message">Hello, < email-id ></Email-id></span>					
+    </div> -->
+    <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+                <header id="header">	
+
+                    <section id="banner">
+						<div class="inner">
+							<h1>Admin Section</h1>
+						
+					</section>
+               
+                        <nav id="nav">
+                        <ul>
+                            <li class="special">
+                                <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                                <div id="menu">
+                                    <ul>
+                                        <li><a href="Responsive Registration Form/Registrastion form.html">Signup</a></li>
+                                       
+                                        <li><a href="Logout.html">Log Out</a>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+
+                        </div>
+
+    <ul id="list">
+
+
+    </ul>
+
+
+     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+     <script src="assets/js/jquery.min.js"></script>
+     <script src="assets/js/jquery.scrollex.min.js"></script>
+     <script src="assets/js/jquery.scrolly.min.js"></script>
+     <script src="assets/js/browser.min.js"></script>
+     <script src="assets/js/breakpoints.min.js"></script>
+     <script src="assets/js/util.js"></script>
+     <script src="assets/js/main.js"></script>
+
+<script>
+
+    
+    var firebaseConfig = {
+       apiKey: "AIzaSyAApf81Sf1Oa1BCxszXYeOz4QLir91M3Vo",
+       authDomain: "salon-management-system-da0af.firebaseapp.com",
+       databaseURL: "https://salon-management-system-da0af-default-rtdb.firebaseio.com/",
+       projectId: "salon-management-system-da0af",
+       storageBucket: "salon-management-system-da0af.appspot.com",
+       messagingSenderId: "234328146997",
+      appId: "1:234328146997:web:b3313750bed1a336eb9d7c",
+      measurementId: "G-XQJ6L1R78N"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    var stdNo=0;
+
+    function addItemsToList(fname,lname,appid,email,phoneno,book,time,c1,c2,c3,c4,c5,c6){
+        var ul=document.getElementById('list')
+
+        var header=document.createElement('h2');
+
+      var _fname=document.createElement('li');
+       var _lname =document.createElement('li');
+       var _appid =document.createElement('li');
+       var _email =document.createElement('li');
+       var _phoneno =document.createElement('li');
+       var _book =document.createElement('li');
+       var _time =document.createElement('li');
+       var _c1 =document.createElement('li');
+       var _c2 =document.createElement('li');
+       var _c3 =document.createElement('li');
+       var _c4 =document.createElement('li');
+       var _c5 =document.createElement('li');
+       var _c6 =document.createElement('li');
+       
+
+
+
+       header.innerHTML='Customer-'+  (++stdNo);
+       
+
+       _fname.innerHTML='First Name:'+fname;
+       _lname.innerHTML='Last Name:'+lname;
+       _appid.innerHTML='Appointment ID:'+appid;
+       _email.innerHTML='Email:'+email;
+       _phoneno.innerHTML='Phone No:'+phoneno;
+       _book.innerHTML='Booking Date:'+book;
+       _time.innerHTML='Booking Time:'+time;
+       _c1.innerHTML='Choice 1:'+c1;
+       _c2.innerHTML='Choice 2:'+c2;
+       _c3.innerHTML='Choice 3:'+c3;
+       _c4.innerHTML='Choice 4:'+c4;
+       _c5.innerHTML='Choice 5:'+c5;
+       _c6.innerHTML='Choice 6:'+c6;
+
+       
+       
+        ul.appendChild(header);
+        ul.appendChild(_fname);
+        ul.appendChild(_lname);
+        ul.appendChild(_appid);
+        ul.appendChild(_email);
+        ul.appendChild(_phoneno);
+        ul.appendChild(_book);
+        ul.appendChild(_time);
+        ul.appendChild(_c1);
+        ul.appendChild(_c2);
+        ul.appendChild(_c3);
+        ul.appendChild(_c4);
+        ul.appendChild(_c5);
+        ul.appendChild(_c6);
+        
+        
+    }
+
+    function FetchAllData(){
+        
+        firebase.database().ref('Appointment').once('value',function(snapshot){
+        snapshot.forEach(
+            function(ChildSnapshot){
+                let fname=ChildSnapshot.val().firstname;
+                let lname=ChildSnapshot.val().lastname;
+                let appid=ChildSnapshot.val().appointmentid;
+                let email=ChildSnapshot.val().email;
+                let phoneno=ChildSnapshot.val().phoneno;
+                let book=ChildSnapshot.val().bookingdate;
+                let time=ChildSnapshot.val().appt;
+                let c1=ChildSnapshot.val().choice1;
+                let c2=ChildSnapshot.val().choice2;
+                let c3=ChildSnapshot.val().choice3;
+                let c4=ChildSnapshot.val().choice4;
+                let c5=ChildSnapshot.val().choice5;
+                let c6=ChildSnapshot.val().choice6;
+              
+               
+
+                addItemsToList(fname,lname,appid,email,phoneno,book,time,c1,c2,c3,c4,c5,c6);
+            }
+        )
+        });
+    }
+    FetchAllData();
+    </script>
+
+
+</body>
+
+</html>
