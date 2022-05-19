@@ -1,0 +1,109 @@
+
+.banner3 {
+  font-family:"Arial, Helvetica, sans-serif";
+  font-weight: bold;
+  color: #f8f0f0;
+  font-weight: 500;
+  max-height: 1000px;
+  font-weight: bold;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+    background-color: #76b8a0;
+  color: rgb(0, 0, 0);
+}
+
+.banner3 .banner {
+  position: relative;
+  max-height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100%;
+  font-weight: bold;
+  display: table;
+  color:#ffffff;
+}
+
+.banner3 h1,
+.banner3 h2,
+.banner3 h3,
+.banner3 h4,
+.banner3 h5,
+.banner3 h6 {
+  color: #424242;
+  font-weight: bold;
+  
+}
+
+.banner3 .font-weight-medium {
+  font-weight: bold;
+}
+
+.banner3 .subtitle {
+  color: #ffffff;
+  line-height: 24px;
+}
+
+.banner3 .btn-danger-gradiant {
+  background: #000000;
+  background: linear-gradient(to right, #222222 0%, #222222 100%);
+  border: rgb(255, 255, 255);
+  
+  
+}
+
+
+
+.banner3 .btn-danger-gradiant.active,
+.banner3 .btn-danger-gradiant:active,
+.banner3 .btn-danger-gradiant:focus {
+  -webkit-box-shadow: 0px;
+  box-shadow: 0px;
+  opacity: 1;
+}
+
+
+.banner3 .btn-md {
+  padding: 15px 45px;
+  font-size: 16px;
+}
+
+.banner3 .form-row {
+  margin: 0;
+}
+
+.banner3 label.font-12 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.banner3 .form-control {
+  color: #000000;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.banner3 .date label {
+  cursor: pointer;
+  margin: 0;
+}
+
+@media (max-width: 370px) {
+  .banner3 .left,
+  .banner3 .right {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .banner3 .left,
+  .banner3 .right {
+    padding: 25px 15px;
+  }
+}
